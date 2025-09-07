@@ -33,6 +33,11 @@
         .bangla-font {
             font-family: "Hind Siliguri", sans-serif;
         }
+
+        .active {
+            background-color: #422ad5;
+            color: white;
+        }
     </style>
 
 </head>
@@ -110,14 +115,31 @@
 
             </div>
         </section>
-        
-        <section id="wordContainer" class="bg-[#79716b17] rounded-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-10 my-10">
+
+        <section id="wordContainer"
+            class="bg-[#79716b17] rounded-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-10 my-10">
 
             <div class="bangla-font text-center col-span-full">
                 <p class="text-[#79716b] mb-2">আপনি এখনো কোন Lesson Select করেন নি</p>
                 <h2 class=" text-3xl font-semibold">একটি Lesson Select করুন।</h2>
             </div>
         </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modal-container" class="border-2 border-blue-100 rounded-xl p-6 space-y-5">
+                    
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-[#422ad5] text-white rounded-lg">Complete Learning</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <script src="./script/index.js"></script>
