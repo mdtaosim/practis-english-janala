@@ -32,9 +32,9 @@ const displayLevelWord = (words) => {
         const card=document.createElement("div")
         card.innerHTML=`
         <div class="bg-white rounded-3xl shadow-sm text-center p-10">
-                <h2 class="font-bold text-3xl">${word.word}</h2>
+                <h2 class="font-bold text-3xl">${word.word?word.word:'শব্দ পাওয়া যায়নি'}</h2>
                 <p>Meaning /Pronounciation</p>
-                <div class="bangla-font text-3xl text-gray-700 mt-6">"${word.meaning}/ ${word.pronunciation}"</div>
+                <div class="bangla-font text-3xl text-gray-700 mt-6">"${word.meaning?word.meaning:'অর্থ পাওয়া যায়নি'}/ ${word.pronunciation?word.pronunciation:'pronunciation পাওয়া যায়নি'}"</div>
                 <div class="flex justify-between mt-10">
                     <button class="bg-blue-200 hover:bg-blue-400 btn h-14 w-14 rounded-2xl flex justify-center items-center"><i class="fa-solid fa-circle-info"></i></button>
                     <button class="bg-blue-200 hover:bg-blue-400 btn h-14 w-14 rounded-2xl flex justify-center items-center"><i class="fa-solid fa-volume-high"></i></button>
